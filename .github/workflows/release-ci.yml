@@ -77,7 +77,7 @@ jobs:
       - name: Extract changelog
         shell: pwsh
         run: |
-          .\extract_changelog.ps1
+          # .\extract_changelog.ps1
         if: startsWith(github.ref, 'refs/tags/')
 
       - name: Create Nightly release
@@ -99,5 +99,5 @@ jobs:
           files: |
             ./output/archives/weasel*.exe
             ./output/archives/symbols.zip
-          body_path: ${{ github.workspace }}/RELEASE_CHANGELOG.md
+          # body_path: ${{ github.workspace }}/RELEASE_CHANGELOG.md
         
